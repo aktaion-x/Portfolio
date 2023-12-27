@@ -20,7 +20,7 @@ function Navbar() {
     <div className="fixed z-50 w-full left-1/2 -translate-x-1/2 dark:bg-[#000000b3] bg-[#ebebebb3] dark:text-white rounded-b border-b border-[#ffffff17] ">
       <div className="px-3 md:px-10 max-w-[1300px] mx-auto my-2">
         <nav className="px-5 py-3 flex justify-between items-center">
-          <div className="text-2xl md:text-3xl font-extralight"><Link className='logo' to='/'>Ghassan Athamin</Link></div>
+          <div className="text-xl md:text-2xl lg:text-3xl font-extralight"><Link className='logo' to='/'>Ghassan Athamin</Link></div>
           <div className="flex justify-between items-center md:w-2/5">
             <ul className='nav-links hidden md:flex text-gray-800 dark:text-gray-300 justify-between items-center w-full'>
               <li className="text-lg font-medium"><NavLink to='/about'>About</NavLink></li>

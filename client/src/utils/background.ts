@@ -9,7 +9,7 @@ const randomFromInterval = (min: number, max: number) => {
 };
 
 export const pointsInner = (color1: string, color2: string) => {
-  return Array.from({ length: NUM_POINTS }, (v, k) => k + 1).map(num => {
+  return Array.from({ length: NUM_POINTS }, (_, k) => k + 1).map(num => {
     const randomRadius = randomFromInterval(MIN_RADIUS, MAX_RADIUS);
     const randomAngle = Math.random() * Math.PI * 2;
     const x = Math.cos(randomAngle) * randomRadius;
@@ -28,7 +28,7 @@ export const pointsInner = (color1: string, color2: string) => {
 }
 
 export const pointsOuter = (color1: string, color2: string) => {
-  return Array.from({ length: NUM_POINTS / 4 }, (v, k) => k + 1).map(num => {
+  return Array.from({ length: NUM_POINTS / 4 }, (_, k) => k + 1).map(num => {
     const randomRadius = randomFromInterval(MIN_RADIUS / 2, MAX_RADIUS * 2);
     const angle = Math.random() * Math.PI * 2;
 

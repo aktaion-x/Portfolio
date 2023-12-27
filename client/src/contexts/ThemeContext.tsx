@@ -31,7 +31,7 @@ const themeReducer = (state: ThemeState, action: SwitchAction): ThemeState => {
 
 export const ThemeContextProvider = ({ children }: ThemeContextProps) => {
   const [state, dispatch] = useReducer(themeReducer, {
-    theme: "dark"
+    theme: "light"
   });
 
   useEffect(() => {

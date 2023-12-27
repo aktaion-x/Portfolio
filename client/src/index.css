@@ -9,10 +9,10 @@ body {
 }
 /* change cursor for the canvas */
 .bg-canvas {
-  cursor: url(cursor-pointer.png) 0 0, auto;
+  cursor: url(/cursor-pointer.png) 0 0, auto;
 }
 canvas {
-  cursor: url(cursor.png) 1 1, auto;
+  cursor: url(/cursor.png) 1 1, auto;
 }
 /* style the home box */
 .hero-text h1 div {
