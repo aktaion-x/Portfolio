@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { Home, About, Projects, Contact, Skills, Admin } from './pages';
+import { Home, About, Projects, Contact, Skills } from './pages';
 import { ThemeContext } from './contexts/ThemeContext';
 import { useContext, useEffect, useRef } from 'react';
 
@@ -24,7 +24,6 @@ function App() {
             <Route path='/projects' element={<Projects />} />
             <Route path='/skills' element={<Skills />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/admin' element={<Admin />} />
           </Routes>
         </div>
       </BrowserRouter>

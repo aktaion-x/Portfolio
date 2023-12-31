@@ -1,24 +1,10 @@
 import Card from "./Card";
 import { textVariant, fadeIn, staggerContainer } from '../../utils/motion'
 import { motion } from "framer-motion";
-import useProject from "../../hooks/useProject";
-import { useEffect, useState } from "react";
-import { Project } from "../../types/project";
+import { projects } from "../../assets/constants";
 
 
 function Index() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const { getProjects, isPending, error } = useProject()
-  useEffect(() => {
-    const get = async () => {
-      const res = await getProjects();
-      if (res?.status === 200) {
-        console.log(res.data.data)
-        setProjects([...res.data.data])
-      }
-    }
-    get()
-  }, [])
   return (
     <motion.div
       variants={staggerContainer(.1, .1)}
@@ -39,8 +25,6 @@ function Index() {
           <Card key={Math.random()} index={index} project={project} />
         ))}
       </div>
-      {isPending && <div>Loading...</div>}
-      {error && <div className='text-red-700 mt-5'><span className='underline font-semibold'>Error:</span> {error}</div>}
     </motion.div>
   );
 }

@@ -4,13 +4,9 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import Icon from "../assets/Icon";
 import Modal from './Modal';
-import useUser from '../hooks/useUser';
-import useAuthContext from '../hooks/useAuthContext';
 
 function Navbar() {
   const { dispatch } = useContext(ThemeContext)!;
-  const { logoutUser } = useUser()
-  const { userData } = useAuthContext()
   const [navOpen, setNavOpen] = useState(false)
   const handleThemeToggle = () => dispatch({ type: 'SWITCH' });
   const handleNavOpen = () => setNavOpen(true);
@@ -27,7 +23,6 @@ function Navbar() {
               <li className="text-lg font-medium"><NavLink to='/projects'>Projects</NavLink></li>
               <li className="text-lg font-medium"><NavLink to='/skills'>Skills</NavLink></li>
               <li className="text-lg font-medium"><NavLink to='/contact'>Contact</NavLink></li>
-              {userData && <li className="text-lg font-medium"><button onClick={() => logoutUser()}>Logout</button></li>}
             </ul>
             <motion.button
               whileTap={{
@@ -63,7 +58,6 @@ function Navbar() {
               <li onClick={handleNavClose} className="text-lg font-medium"><NavLink to='/projects'>Projects</NavLink></li>
               <li onClick={handleNavClose} className="text-lg font-medium"><NavLink to='/skills'>Skills</NavLink></li>
               <li onClick={handleNavClose} className="text-lg font-medium"><NavLink to='/contact'>Contact</NavLink></li>
-              {userData && <li className="text-lg font-medium"><button onClick={() => logoutUser()}>Logout</button></li>}
             </ul>
           </Modal>}
       </AnimatePresence>
