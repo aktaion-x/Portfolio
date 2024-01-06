@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: "Philadelphia Estates is a Amman based website that let people sell and buy Real Estates. users also can search, filter and find their desired Estate",
     links: {
       github: "https://github.com/aktaion-x/Philadelphia-Estates",
-      live: "8884",
+      live: "",
       install: ""
     },
   },
@@ -34,8 +34,8 @@ export const projects: Project[] = [
     ],
     description: "Career Link, a web application designed to connect job seekers and employers in a seamless and efficient manner. Developed with a passion for Laravel and MySQL.",
     links: {
-      github: "https://github.com/aktaion-x/Laravel-CareerLink",
-      live: "8881",
+      github: "https://github.com/aktaion-x/CareerLink",
+      live: "",
       install: ""
     },
   },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description: "twitter clone build using MERN Stack (MongoDB, Express.js, React, Node.js) it's a backend-frontend clone and it does have the most of what real-twitter provide. e.g. create tweet, quote tweet, reply, like, retweet, add to bookmark, and more and more...",
     links: {
       github: "https://github.com/aktaion-x/Twitter-Clone",
-      live: "8883",
+      live: "https://twitter-clone-aktaion.vercel.app",
       install: ""
     },
   },
@@ -71,8 +71,8 @@ export const projects: Project[] = [
     description: "replace default Chrome New tab with a beautiful minimal functional one, that let you add you'r todo list change the title and add you'r favorite websites",
     links: {
       github: "https://github.com/aktaion-x/Chrome-Extension-Taskify",
-      install: "https://drive.google.com/drive/folders/17VVW9xM_T-QHJS6t8gQrZRoNq6KqTTh5",
-      live: "8885"
+      install: "",
+      live: "https://chrome-extension-taskify.vercel.app"
     },
   },
   {
@@ -86,8 +86,8 @@ export const projects: Project[] = [
     ],
     description: "This was my Portfolio, I have build it while learning react to practice my skills, all the information in it are statically typed.",
     links: {
-      github: "https://github.com/aktaion-x/React-Portfolio",
-      live: "8882",
+      github: "https://github.com/aktaion-x/Previous-Portfolio.git",
+      live: "https://previous-portfolio-aktaion.vercel.app",
       install: ""
     },
   },
