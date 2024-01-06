@@ -19,7 +19,7 @@ const Card = ({ index, project }: { index: number, project: Project }) => {
         variants={fadeIn("right", "spring", (index / 2) * 0.5, 0.75)}
         className='rounded-lg bg-white border border-transparent dark:border-[#000000b3] overflow-hidden shadow-2xl'>
         <div className='max-w-sm text-black'>
-          <a target="_blank" href={liveUrl}>
+          <a target="_blank" href={liveUrl ? liveUrl : '#'}>
             <img className="w-full object-cover" src={project.image} alt={project.name} />
           </a>
           <div className="py-3 px-4">
