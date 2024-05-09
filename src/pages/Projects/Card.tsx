@@ -49,7 +49,7 @@ const Card = ({ index, project }: { index: number, project: Project }) => {
             <div className="text-sm mt-2">
               {Object.keys(project.links).map((key) => {
                 if (project.links[key as keyof typeof project.links]) {
-                  if (key === 'live') {
+                  if (key === 'live' && liveUrl.length) {
                     // set live url
                     return (
                       <div className="mb-1 font-semibold" key={key}>
