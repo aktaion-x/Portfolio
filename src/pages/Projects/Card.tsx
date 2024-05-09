@@ -3,7 +3,7 @@ import { options as tiltOption } from "../../utils/tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
 import { Project } from "../../types/project";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 
 const Card = ({ index, project }: { index: number, project: Project }) => {
