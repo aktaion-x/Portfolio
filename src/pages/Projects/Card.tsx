@@ -7,24 +7,25 @@ import { useEffect, useState } from "react";
 
 
 const Card = ({ index, project }: { index: number, project: Project }) => {
-  const [liveUrl, setLiveUrl] = useState("")
-  useEffect(() => {
-    if (project.links.live) {
-      setLiveUrl(import.meta.env.VITE_APP + ":" + project.links.live)
-    }
-  }, [])
+  // const [liveUrl, setLiveUrl] = useState("")
+  // useEffect(() => {
+  //   if (project.links.live) {
+  //     setLiveUrl(import.meta.env.VITE_APP + ":" + project.links.live)
+  //     console.log({ liveUrl })
+  //   }
+  // }, [])
   return (
     <Tilt options={tiltOption}>
       <motion.div
         variants={fadeIn("right", "spring", (index / 2) * 0.5, 0.75)}
         className='rounded-lg bg-white border border-transparent dark:border-[#000000b3] overflow-hidden shadow-2xl'>
         <div className='max-w-sm text-black'>
-          <a target="_blank" href={liveUrl ? liveUrl : '#'}>
+          <a target="_blank" href={project.links.live ? project.links.live : '#'}>
             <img className="w-full object-cover" src={project.image} alt={project.name} />
           </a>
           <div className="py-3 px-4">
             <h3>
-              <a target="_blank" className="text-xl font-bold block" href={liveUrl}>
+              <a target="_blank" className="text-xl font-bold block" href={project.links.live}>
                 {project.name}
               </a>
             </h3>
@@ -49,15 +50,15 @@ const Card = ({ index, project }: { index: number, project: Project }) => {
             <div className="text-sm mt-2">
               {Object.keys(project.links).map((key) => {
                 if (project.links[key as keyof typeof project.links]) {
-                  if (key === 'live' && liveUrl.length) {
+                  if (key === 'live' && project?.links?.live?.length) {
                     // set live url
                     return (
                       <div className="mb-1 font-semibold" key={key}>
                         {key[0].toUpperCase() + key.slice(1)}:{" "}
-                        <a target="_blank" className="font-normal hover:underline" href={liveUrl}>
-                          {liveUrl.length > 35
-                            ? liveUrl.slice(0, 35) + "..."
-                            : liveUrl.slice(0, 35)}
+                        <a target="_blank" className="font-normal hover:underline" href={project?.links.live}>
+                          {project?.links.live.length > 35
+                            ? project?.links.live.slice(0, 35) + "..."
+                            : project?.links.live.slice(0, 35)}
                         </a>
                       </div>
                     )
